@@ -1,0 +1,107 @@
+<!DOCTYPE HTML>
+<html lang="zxx" class="no-js">
+<HTML>
+<head>
+<!-- Mobile Specific Meta -->
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<!-- Favicon-->
+
+	<meta charset="UTF-8">
+<link rel="stylesheet" type="text/css" href="../static/css/wallet.css">
+</head>
+
+<body>
+
+  <div class="wrapper">
+    <div class="app-wrapper">
+
+      <!--Wallet-->
+      <aside class="wallet">
+        <h2 style = "color : whitesmoke">My Wallets</h2>
+        <div class="modal-control" onclick="document.getElementById('myModal').style.display='block'">+</div>
+        <div id="myModal" class="modal" style="display: none;">
+
+  <!-- Modal content -->
+  <div class="modal-content">
+    <span class="close">×</span>
+    <div class="row .payment-dialog-row">
+    <div class="col-md-4 col-md-offset-4 col-xs-12">
+        <div class="panel panel-default credit-card-box">
+            <div class="panel-heading">
+                <h3 class="panel-title"><span class="panel-title-text">Payment Details</span><img src="accepted_cards.png" class="img-responsive panel-title-image"></h3></div>
+            <div class="panel-body">
+                <form id="payment-form">
+                    <div class="row">
+                        <div class="col-xs-12">
+                            <div class="form-group">
+                                <label for="cardNumber" class="control-label">Card number</label>
+                                <div class="input-group">
+                                    <input required="" placeholder="Valid Card Number" class="form-control" id="cardNumber" type="tel">
+                                    <div class="input-group-addon"><span><i class="fa fa-credit-card"></i></span></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-xs-7">
+                            <div class="form-group">
+                                <label for="cardExpiry" class="control-label"><span class="hidden-xs">expiration</span><span class="visible-xs-inline">EXP</span>date</label>
+                                <input required="" placeholder="MM / YY" class="form-control" id="cardExpiry" type="tel">
+                            </div>
+                        </div>
+                        <div class="col-xs-5 pull-right">
+                            <div class="form-group">
+                                <label for="cardCVC" class="control-label">cv code</label>
+                                <input required="" placeholder="CVC" class="form-control" id="cardCVC" type="tel">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-xs-12">
+                            <div class="form-group">
+                                <label for="couponCode" class="control-label">enter amount</label>
+                                <input class="form-control" id="couponCode" type="text">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-xs-12">
+                            <button class="btn btn-success btn-block btn-lg" type="submit">MAKE PAYMENT</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+  </div>
+
+</div>
+        <div class="cards"></div>
+      </aside>
+
+      <content class="transactions-wrapper">
+        <h2>
+          Current Balance
+          <span class="total-balance"></span>
+        </h2>
+        <div class="transactions"></div>
+      </content>
+
+    </div>
+
+  </div>
+  <div class="modal">
+    <div class="modal-body">
+      <h3>Add New Card</h3>
+      <div class="modal-close">+</div>
+      <div class="card-list">
+        <div class="card-image visa"></div>
+        <div class="card-image amex"></div>
+        <div class="card-image mc"></div>
+      </div>
+    </div>
+  </div>
+<script src="../static/js/wallet.js"></script>
+</body>
+</HTML>
